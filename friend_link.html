@@ -72,29 +72,9 @@
         span.style.color = item['background-color']
         span.style['font-size'] = '14px'
         cnt += 1
-        // test_alive(li.id, a0.href)
       })
     })
   })
 
-function test_alive(id, url){
-  var divstatus = document.getElementById(id)
-  const base = 'https://textance.herokuapp.com/title/'
-  var fullurl = base + url
-  $.ajax({
-      url: fullurl,
-      complete: function(data) {
-        if (data.responseText.includes('502')){
-          // divstatus.style.color='#FBB7B7'
-          // divstatus.style.color='gray'
-          // divstatus.title = "服务器无响应"
-          divstatus.parentNode.removeChild(divstatus)
-        }else{
-          // divstatus.style.color='#B6FAC8'
-          divstatus.title = data.responseText
-        }
-      }
-  });
-  return divstatus
-}
+
 </script>
